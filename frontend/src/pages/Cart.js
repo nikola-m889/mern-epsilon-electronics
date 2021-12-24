@@ -19,7 +19,7 @@ export default function Cart() {
 
   const cartSubTotal = () => {
     let subTotal = 0;
-    cartItems.map((item) => (subTotal += item.price));
+    cartItems.map((item) => (subTotal += item.price * item.qty));
     return subTotal;
   };
 
