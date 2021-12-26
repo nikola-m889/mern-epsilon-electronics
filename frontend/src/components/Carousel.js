@@ -91,5 +91,14 @@ const StyledCarousel = styled.div`
       min-height: 260px;
       max-width: 100%;
     }
+  }@media (max-width: 414px) {
+    .carousel-inner .carousel-item {
+      height: 220px;
+    }
+
+    .carousel-item img {
+      min-height: 220px;
+      max-width: 100%;
+    }
   }
 `;
