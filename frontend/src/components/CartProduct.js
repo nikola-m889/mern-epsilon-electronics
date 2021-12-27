@@ -9,6 +9,8 @@ export default function CartProduct({
 }) {
   return (
     <CartProductStyled>
+      <div className="cart-column-info">
+    
       {/* column 1 */}
       <div className="cart-product-image">
         <img src={item.imageUrl} alt={item.name} />
@@ -39,6 +41,8 @@ export default function CartProduct({
           </button>
         </div>
       </div>
+      
+      </div>
 
       {/* column 3 */}
       <div className="cart-product-stock">
@@ -64,7 +68,7 @@ export default function CartProduct({
 const CartProductStyled = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 3fr 3fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
   gap: 10px;
   padding: 15px;
   margin-bottom: 20px;
@@ -75,6 +79,11 @@ const CartProductStyled = styled.div`
     /*align-items: center;*/
     margin-left: 20px;
     flex-direction: column;
+  }
+
+ .cart-column-info {
+   display: flex;
+   flex-direction: row;
   }
 
   .model-name {
@@ -107,5 +116,32 @@ const CartProductStyled = styled.div`
 
   p {
     margin: 3px 0;
+  }
+@media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    .cart-product-image img {
+      height: 140px;
+      width: 110px;
+    }
+    .cart-column-info {
+      margin: 0 auto;
+      width: 85vw;
+      display: flex;
+      justify-content: space-between;
+    }
+    .cart-product-name {
+      flex: 0.7;
+    }
+    .stock-info {
+      display: none;
+    }
+    .cart-product-stock,
+    .cart-product-price,
+    .cart-product-subtotal {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `;
