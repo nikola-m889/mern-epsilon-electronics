@@ -74,7 +74,7 @@ export default function ProductInfo({ match, history }) {
               <p>Product Brand: {product.brand}</p>
               <p>Product year: {product.year}</p>
               <p>Product weight: {product.weight}</p>
-              <p>anufacturer's warranty: {product.warranty}</p>
+              <p>Manufacturer's warranty: {product.warranty}</p>
             </div>
           </>
         )}
